@@ -19,12 +19,33 @@ $brand: #0098ff;
 $bg: #fafafa;
 $book: 'Gotham Book';
 $bold: 'Gotham Bold';
+body {
+    background-color: $bg;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+#r1 {
+    display: flex;
+    flex-direction: row;
+}
+
 //type styles
 .primary {
     font-family: $bold;
     font-size: 16px;
     color: #FFFFFF;
     letter-spacing: 2px;
+    background-color: $brand;
+    padding: 16px;
+    text-transform: uppercase;
+}
+
+.btn {
+    border-radius: 5px;
 }
 
 .secondary {
@@ -93,33 +114,79 @@ $bold: 'Gotham Bold';
 }
 
 .topbar {
-    height: 60px;
+    height: 66px;
     background: #FFFFFF;
     box-shadow: 0 1px 0 0 #D8E7F3;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    .title{
+    .title {
         padding-left: 48px;
     }
     .user-cntl {
         display: flex;
         flex-direction: row;
         align-items: center;
-        .normal{
+        .normal {
             padding-left: 16px;
         }
-        .more{
+        .more {
             height: 12px;
             width: 12px;
             padding-right: 48px;
             padding-left: 12px;
         }
-        .dp {
-            height: 40px;
-            width: 40px;
+        .dpwrapper {
+            height: 44px;
+            width: 44px;
+            border: 1px solid rgba($brand, 0.5);
             border-radius: 50%;
+            .dp {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                padding: 2px;
+            }
         }
+    }
+}
+
+.sidebar {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 1px 0px 0 0 #D8E7F3;
+    div {
+        display: inline-block;
+        a {
+            display: inline-block;
+            padding: 20px 72px 20px 32px;
+            img {
+                margin-right: 16px;
+                vertical-align: bottom;
+            }
+        }
+    }
+}
+
+.activeoption {
+    span {
+        color: $brand;
+    }
+    background-color: rgba($brand,
+    0.05);
+    border-left: 2px solid $brand;
+}
+
+#primaryform {
+    margin: 40px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p{
+        margin:48px 0px;
     }
 }

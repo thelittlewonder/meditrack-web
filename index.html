@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,23 @@
 
 <body>
     <div id="root">
-        <topbar></topbar>
+        <div id="r0">
+            <topbar></topbar>
+        </div>
+        <div id="r1">
+            <nav-list></nav-list>
+            <div class="card" id="primaryform">
+                <img src="assets/emptystate-1.png">
+                <p class="normal">Welcome to Meditrack. Meditrack allows to streamline the process of taking medicines for patients by directly sending them reminders. A patient can also rebook the medicine from the application when his stock gets over.</p>
+                <button class="primary btn"> Process a new order</button>
+            </div>
+        </div>
     </div>
 </body>
-</html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="style.css"><script src="vue.js"></script><script src="script.js"></script>
 
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="vue.js"></script>
+<script src="vue-router.js"></script>
+<script src="script.js"></script>
