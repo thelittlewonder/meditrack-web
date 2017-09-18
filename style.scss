@@ -1,0 +1,125 @@
+@import "reset.css";
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('fonts/Gotham Rounded Bold.eot');
+    src: local('☺'), url('fonts/Gotham Rounded Bold.woff') format('woff'), url('fonts/Gotham Rounded Bold.ttf') format('truetype'), url('fonts/Gotham Rounded Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('fonts/Gotham Rounded Book.eot');
+    src: local('☺'), url('fonts/Gotham Rounded Book.woff') format('woff'), url('fonts/Gotham Rounded Book.ttf') format('truetype'), url('fonts/Gotham Rounded Book.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$brand: #0098ff;
+$bg: #fafafa;
+$book: 'Gotham Book';
+$bold: 'Gotham Bold';
+//type styles
+.primary {
+    font-family: $bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+}
+
+.secondary {
+    font-family: $book;
+    font-size: 14px;
+    color: $brand;
+    letter-spacing: 1.75px;
+}
+
+.title {
+    font-family: $book;
+    font-size: 24px;
+    color: $brand;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.nav {
+    font-family: $book;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.heading {
+    font-family: $book;
+    font-size: 24px;
+    color: #555555;
+    letter-spacing: 0.5px;
+}
+
+.formlabel {
+    font-family: $book;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.emptystate {
+    font-family: $book;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.25);
+    letter-spacing: 2px;
+}
+
+.normal {
+    font-family: $book;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 80);
+    letter-spacing: 0.28px;
+}
+
+.normaltwo {
+    font-family: $book;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 80);
+    letter-spacing: 0.34px;
+}
+
+//card
+.card {
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    box-shadow: 0 2px 2px 0 #ECECEC;
+    border-radius: 10px;
+}
+
+.topbar {
+    height: 60px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 0 0 #D8E7F3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .title{
+        padding-left: 48px;
+    }
+    .user-cntl {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .normal{
+            padding-left: 16px;
+        }
+        .more{
+            height: 12px;
+            width: 12px;
+            padding-right: 48px;
+            padding-left: 12px;
+        }
+        .dp {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+    }
+}
