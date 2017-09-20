@@ -26,10 +26,10 @@
                     </div>
                     <div>
                         <form>
-                            <div><label class="formlabel" for="medicinename">Medicine Name</label><input type="text" name="medicinename" placeholder="Start typing name of medicine"></div>
-                            <div><label class="formlabel" for="quantity">Quantity</label><input type="number" name="quantity" placeholder="Number of medicine units"></div>
-                            <div><label class="formlabel" for="frequency">Frequency</label><input type="number" name="frequency" placeholder="Frequency of each medicine"></div>
-                            <button type="submit" class="secondary btn">Add</button>
+                            <div><label class="formlabel" for="medicinename">Medicine Name</label><input type="text" name="medicinename" placeholder="Start typing name of medicine" v-model="namevalue"></div>
+                            <div><label class="formlabel" for="quantity">Quantity</label><input type="number" name="quantity" placeholder="Number of medicine units" v-model="quantityvalue"></div>
+                            <div><label class="formlabel" for="frequency">Frequency</label><input type="number" name="frequency" placeholder="Frequency of each medicine" v-model="frequencyvalue"></div>
+                            <button type="submit" class="secondary btn" @click="addMedicine">Add</button>
                         </form>
                     </div>
                 </div>
@@ -37,17 +37,12 @@
                     <img src="assets/empty.png">
                     <p class="emptystate">Your Cart is Empty. Add a medicine .</p>
                 </div>
-                <div class="card" id="order" v-show="!listEmpty">
+                <div class="card" id="orderform" v-show="!listEmpty">
                     <table class="normal">
-                        <tr>
-                            <td>Crocin Advance 500mg</td>
-                            <td>16 tablets</td>
-                            <td>Twice a day</td>
-                        </tr>
-                        <tr>
-                            <td>Cetrizine 5mg</td>
-                            <td>8 tablets</td>
-                            <td>Once a day</td>
+                        <tr v-for="order in orders">
+                            <td>{{order.name}}</td>
+                            <td>{{order.qty}} tablets</td>
+                            <td>{{order.f}} times a day</td>
                         </tr>
                     </table>
                     <button class="primary btn">Proceed to checkout</button>

@@ -64,6 +64,26 @@ var en0 = new Vue({
     data: {
         options: [],
         homeActive: false,
-        listEmpty: false
+        listEmpty: false,
+        namevalue: "",
+        quantityvalue: "",
+        frequencyvalue: "",
+        orders: []
+    },
+    methods: {
+        addMedicine: function (e) {
+            e.preventDefault();
+            let temp = {
+                name: this.namevalue,
+                qty: this.quantityvalue,
+                f: this.frequencyvalue
+            };
+            if (temp.name !== "" && temp.qty !== "" && temp.f !== "") {
+                this.orders.push(temp);
+            }
+            this.namevalue = "";
+            this.quantityvalue = "";
+            this.frequencyvalue = "";
+        }
     }
 })

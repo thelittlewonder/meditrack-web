@@ -269,6 +269,10 @@ body {
                 }
                 button {
                     height: 100%;
+                    &:focus{
+                        background-color: $brand;
+                        color: White;
+                    }
                 }
                 input {
                     background: #FFFFFF;
@@ -281,6 +285,10 @@ body {
                         border: 1px solid $brand;
                         outline: none;
                     }
+                    font-family: Gotham Book;
+                    font-size: 15px;
+                    color: rgb(68,68,68);
+                    letter-spacing: 0.28px;
                 }
                 label {
                     margin-bottom: 12px;
@@ -295,12 +303,12 @@ body {
             margin-top: 40px;
         }
     }
-    #order {
+    #orderform {
         text-align: center;
         table {
             text-align: left;
             margin-bottom: 36px;
-            td{
+            td {
                 padding: 16px 0px;
                 padding-right: 14vw;
             }

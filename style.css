@@ -261,7 +261,11 @@ body {
       /* line 270, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
       #primaryform #input div form button {
         height: 100%; }
-      /* line 273, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+        /* line 272, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+        #primaryform #input div form button:focus {
+          background-color: #0098ff;
+          color: White; }
+      /* line 277, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
       #primaryform #input div form input {
         background: #FFFFFF;
         border: 1px solid #E2E2E2;
@@ -270,31 +274,35 @@ body {
         width: 17vw;
         transition-property: all;
         transition-duration: 0.25s;
-        transition-timing-function: ease-in-out; }
-        /* line 280, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+        transition-timing-function: ease-in-out;
+        font-family: Gotham Book;
+        font-size: 15px;
+        color: #444444;
+        letter-spacing: 0.28px; }
+        /* line 284, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
         #primaryform #input div form input:focus {
           border: 1px solid #0098ff;
           outline: none; }
-      /* line 285, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+      /* line 293, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
       #primaryform #input div form label {
         margin-bottom: 12px; }
-  /* line 291, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+  /* line 299, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
   #primaryform #preview {
     text-align: center;
     padding: 100px; }
-    /* line 294, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+    /* line 302, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
     #primaryform #preview p {
       margin-top: 40px; }
-  /* line 298, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
-  #primaryform #order {
+  /* line 306, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+  #primaryform #orderform {
     text-align: center;
     padding: 24px; }
-    /* line 300, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
-    #primaryform #order table {
+    /* line 308, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+    #primaryform #orderform table {
       text-align: left;
       margin-bottom: 36px; }
-      /* line 303, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
-      #primaryform #order table td {
+      /* line 311, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+      #primaryform #orderform table td {
         padding: 16px 0px;
         padding-right: 14vw; }
 
