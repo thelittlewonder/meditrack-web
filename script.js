@@ -63,8 +63,8 @@ var en0 = new Vue({
     el: "#root",
     data: {
         options: [],
-        homeActive: false,
-        listEmpty: false,
+        homeActive: true,
+        listEmpty: true,
         namevalue: "",
         quantityvalue: "",
         frequencyvalue: "",
@@ -84,6 +84,9 @@ var en0 = new Vue({
             this.namevalue = "";
             this.quantityvalue = "";
             this.frequencyvalue = "";
+            if(this.orders.length){
+                this.listEmpty=false;
+            }
         }
     }
 })
