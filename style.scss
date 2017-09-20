@@ -149,6 +149,7 @@ body {
     border: 1px solid #EFEFEF;
     box-shadow: 0 2px 2px 0 #ECECEC;
     border-radius: 10px;
+    margin: 40px;
 }
 
 .topbar {
@@ -249,11 +250,10 @@ body {
     width: 100%;
     #input {
         padding: 24px;
-        margin: 40px;
         display: flex;
         flex-direction: column;
-        div{
-            p{
+        div {
+            p {
                 margin-bottom: 32px;
             }
         }
@@ -277,12 +277,12 @@ body {
                     padding: 12px;
                     width: 17vw;
                     @include animation;
-                    &:focus{
+                    &:focus {
                         border: 1px solid $brand;
                         outline: none;
                     }
                 }
-                label{
+                label {
                     margin-bottom: 12px;
                 }
             }
@@ -290,10 +290,21 @@ body {
     }
     #preview {
         text-align: center;
-        margin: 40px;
         padding: 100px;
-        p{
+        p {
             margin-top: 40px;
         }
+    }
+    #order {
+        text-align: center;
+        table {
+            text-align: left;
+            margin-bottom: 36px;
+            td{
+                padding: 16px 0px;
+                padding-right: 14vw;
+            }
+        }
+        padding: 24px;
     }
 }

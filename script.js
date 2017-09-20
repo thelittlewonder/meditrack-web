@@ -64,6 +64,6 @@ var en0 = new Vue({
     data: {
         options: [],
         homeActive: false,
-        listEmpty: true
+        listEmpty: false
     }
 })

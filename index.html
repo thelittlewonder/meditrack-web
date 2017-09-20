@@ -37,6 +37,21 @@
                     <img src="assets/empty.png">
                     <p class="emptystate">Your Cart is Empty. Add a medicine .</p>
                 </div>
+                <div class="card" id="order" v-show="!listEmpty">
+                    <table class="normal">
+                        <tr>
+                            <td>Crocin Advance 500mg</td>
+                            <td>16 tablets</td>
+                            <td>Twice a day</td>
+                        </tr>
+                        <tr>
+                            <td>Cetrizine 5mg</td>
+                            <td>8 tablets</td>
+                            <td>Once a day</td>
+                        </tr>
+                    </table>
+                    <button class="primary btn">Proceed to checkout</button>
+                </div>
             </div>
         </div>
 
