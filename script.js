@@ -62,6 +62,8 @@ Vue.component('nav-list', {
 var en0 = new Vue({
     el: "#root",
     data: {
-        options: []
+        options: [],
+        homeActive: false,
+        listEmpty: true
     }
 })

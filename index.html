@@ -14,12 +14,32 @@
         </div>
         <div id="r1">
             <nav-list></nav-list>
-            <div class="card" id="primaryform">
+            <div class="card" id="welcome" v-show="homeActive">
                 <img src="assets/emptystate-1.png">
                 <p class="normal">Welcome to Meditrack. Meditrack allows to streamline the process of taking medicines for patients by directly sending them reminders. A patient can also rebook the medicine from the application when his stock gets over.</p>
-                <button class="primary btn"> Process a new order</button>
+                <button class="primary btn" @click="homeActive=!homeActive"> Process a new order</button>
+            </div>
+            <div id="primaryform">
+                <div class="card" id="input">
+                    <div>
+                        <p class="heading">Order #124</p>
+                    </div>
+                    <div>
+                        <form>
+                            <div><label class="formlabel" for="medicinename">Medicine Name</label><input type="text" name="medicinename" placeholder="Start typing name of medicine"></div>
+                            <div><label class="formlabel" for="quantity">Quantity</label><input type="number" name="quantity" placeholder="Number of medicine units"></div>
+                            <div><label class="formlabel" for="frequency">Frequency</label><input type="number" name="frequency" placeholder="Frequency of each medicine"></div>
+                            <button type="submit" class="secondary btn">Add</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card" id="preview" v-show="listEmpty">
+                    <img src="assets/empty.png">
+                    <p class="emptystate">Your Cart is Empty. Add a medicine .</p>
+                </div>
             </div>
         </div>
+
     </div>
 </body>
 

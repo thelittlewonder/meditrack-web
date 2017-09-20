@@ -6,23 +6,29 @@
   src: local("☺"), url("fonts/Gotham Rounded Bold.woff") format("woff"), url("fonts/Gotham Rounded Bold.ttf") format("truetype"), url("fonts/Gotham Rounded Bold.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Gotham Book';
   src: url("fonts/Gotham Rounded Book.eot");
   src: local("☺"), url("fonts/Gotham Rounded Book.woff") format("woff"), url("fonts/Gotham Rounded Book.ttf") format("truetype"), url("fonts/Gotham Rounded Book.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+/* line 41, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 body {
   background-color: #fafafa; }
 
+/* line 45, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 #root {
   display: flex;
   flex-direction: column; }
 
+/* line 50, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 #r1 {
   display: flex;
   flex-direction: row; }
 
+/* line 62, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .primary {
   font-family: "Gotham Bold";
   font-size: 14px;
@@ -32,22 +38,31 @@ body {
   padding: 16px;
   text-transform: uppercase; }
 
+/* line 72, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .btn {
   border-radius: 5px;
   cursor: pointer;
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out; }
+  /* line 76, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
   .btn:hover {
     transform: scale(1.02);
     box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5); }
 
+/* line 82, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .secondary {
+  border-radius: 2px;
   font-family: "Gotham Book";
   font-size: 14px;
   color: #0098ff;
-  letter-spacing: 1.75px; }
+  letter-spacing: 1.75px;
+  background-color: white;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  border: 1px solid #0098ff; }
 
+/* line 94, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .title {
   font-family: "Gotham Book";
   font-size: 24px;
@@ -55,17 +70,20 @@ body {
   letter-spacing: 1.5px;
   text-transform: uppercase; }
 
+/* line 102, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .nav {
   font-family: "Gotham Book";
   font-size: 18px;
   color: rgba(0, 0, 0, 0.55); }
 
+/* line 108, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .heading {
   font-family: "Gotham Book";
   font-size: 24px;
   color: #555555;
   letter-spacing: 0.5px; }
 
+/* line 115, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .formlabel {
   font-family: "Gotham Book";
   font-size: 14px;
@@ -73,12 +91,15 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase; }
 
+/* line 123, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .emptystate {
   font-family: "Gotham Book";
   font-size: 16px;
   color: rgba(0, 0, 0, 0.25);
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  text-transform: uppercase; }
 
+/* line 131, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .normal {
   font-family: "Gotham Book";
   font-size: 15px;
@@ -86,18 +107,21 @@ body {
   letter-spacing: 0.28px;
   line-height: 23.25px; }
 
+/* line 139, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .normaltwo {
   font-family: "Gotham Book";
   font-size: 18px;
   color: black;
   letter-spacing: 0.34px; }
 
+/* line 147, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .card {
   background: #FFFFFF;
   border: 1px solid #EFEFEF;
   box-shadow: 0 2px 2px 0 #ECECEC;
   border-radius: 10px; }
 
+/* line 154, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .topbar {
   height: 66px;
   background: #FFFFFF;
@@ -106,30 +130,37 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between; }
+  /* line 162, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
   .topbar .title {
     padding-left: 48px; }
+  /* line 165, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
   .topbar .user-cntl {
     display: flex;
     flex-direction: row;
     align-items: center; }
+    /* line 169, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
     .topbar .user-cntl .normal {
       padding-left: 16px; }
+    /* line 172, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
     .topbar .user-cntl .more {
       height: 12px;
       width: 12px;
       padding-right: 48px;
       padding-left: 12px; }
+    /* line 178, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
     .topbar .user-cntl .dpwrapper {
       height: 44px;
       width: 44px;
       border: 1px solid rgba(0, 152, 255, 0.5);
       border-radius: 50%; }
+      /* line 183, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
       .topbar .user-cntl .dpwrapper .dp {
         height: 40px;
         width: 40px;
         border-radius: 50%;
         padding: 2px; }
 
+/* line 193, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .sidebar {
   height: 100vh;
   padding-top: 20px;
@@ -137,27 +168,34 @@ body {
   flex-direction: column;
   background: #FFFFFF;
   box-shadow: 1px 0px 0 0 #D8E7F3; }
+  /* line 200, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
   .sidebar div {
     display: inline-block; }
+    /* line 202, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
     .sidebar div a {
       transition-property: all;
       transition-duration: 0.25s;
       transition-timing-function: ease-in-out;
       display: flex;
       padding: 20px 72px 20px 32px; }
+      /* line 206, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
       .sidebar div a img {
         margin-right: 16px;
         vertical-align: bottom; }
+      /* line 210, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
       .sidebar div a:hover {
         background-color: rgba(0, 152, 255, 0.02); }
 
+/* line 217, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
 .activeoption {
   background-color: rgba(0, 152, 255, 0.05);
   border-left: 2px solid #0098ff; }
+  /* line 218, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
   .activeoption span {
     color: #0098ff; }
 
-#primaryform {
+/* line 226, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+#welcome {
   height: 100%;
   margin: 40px;
   padding: 32px;
@@ -165,8 +203,88 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-  #primaryform p {
+  /* line 234, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+  #welcome p {
     width: 80%;
     margin: 48px 0px; }
+
+/* line 19, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+::-webkit-input-placeholder {
+  font-family: Gotham Book;
+  font-size: 15px;
+  color: rgba(68, 68, 68, 0.3);
+  letter-spacing: 0.28px; }
+
+/* line 23, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+:-moz-placeholder {
+  font-family: Gotham Book;
+  font-size: 15px;
+  color: rgba(68, 68, 68, 0.3);
+  letter-spacing: 0.28px; }
+
+/* line 27, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+::-moz-placeholder {
+  font-family: Gotham Book;
+  font-size: 15px;
+  color: rgba(68, 68, 68, 0.3);
+  letter-spacing: 0.28px; }
+
+/* line 31, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+:-ms-input-placeholder {
+  font-family: Gotham Book;
+  font-size: 15px;
+  color: rgba(68, 68, 68, 0.3);
+  letter-spacing: 0.28px; }
+
+/* line 248, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+#primaryform {
+  width: 100%; }
+  /* line 250, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+  #primaryform #input {
+    padding: 24px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column; }
+    /* line 256, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+    #primaryform #input div p {
+      margin-bottom: 32px; }
+    /* line 261, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+    #primaryform #input div form {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      /* line 266, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+      #primaryform #input div form div {
+        display: flex;
+        flex-direction: column; }
+      /* line 270, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+      #primaryform #input div form button {
+        height: 100%; }
+      /* line 273, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+      #primaryform #input div form input {
+        background: #FFFFFF;
+        border: 1px solid #E2E2E2;
+        border-radius: 2px;
+        padding: 12px;
+        width: 17vw;
+        transition-property: all;
+        transition-duration: 0.25s;
+        transition-timing-function: ease-in-out; }
+        /* line 280, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+        #primaryform #input div form input:focus {
+          border: 1px solid #0098ff;
+          outline: none; }
+      /* line 285, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+      #primaryform #input div form label {
+        margin-bottom: 12px; }
+  /* line 291, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+  #primaryform #preview {
+    text-align: center;
+    margin: 40px;
+    padding: 100px; }
+    /* line 295, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+    #primaryform #preview p {
+      margin-top: 40px; }
 
 /*# sourceMappingURL=style.css.map */

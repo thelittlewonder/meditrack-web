@@ -15,6 +15,25 @@
     font-style: normal;
 }
 
+@mixin placeholder {
+     ::-webkit-input-placeholder {
+        @content
+    }
+    ;
+     :-moz-placeholder {
+        @content
+    }
+    ;
+     ::-moz-placeholder {
+        @content
+    }
+    ;
+     :-ms-input-placeholder {
+        @content
+    }
+    ;
+}
+
 $brand: #0098ff;
 $bg: #fafafa;
 $book: 'Gotham Book';
@@ -61,10 +80,15 @@ body {
 }
 
 .secondary {
+    border-radius: 2px;
     font-family: $book;
     font-size: 14px;
     color: $brand;
     letter-spacing: 1.75px;
+    background-color: white;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    border: 1px solid $brand;
 }
 
 .title {
@@ -101,6 +125,7 @@ body {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.25);
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .normal {
@@ -198,7 +223,7 @@ body {
     border-left: 2px solid $brand;
 }
 
-#primaryform {
+#welcome {
     height: 100%;
     margin: 40px;
     padding: 32px;
@@ -211,4 +236,64 @@ body {
         margin: 48px 0px;
     }
     button {}
+}
+
+@include placeholder {
+    font-family: Gotham Book;
+    font-size: 15px;
+    color: rgba(68, 68, 68, 0.30);
+    letter-spacing: 0.28px;
+}
+
+#primaryform {
+    width: 100%;
+    #input {
+        padding: 24px;
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        div{
+            p{
+                margin-bottom: 32px;
+            }
+        }
+        div {
+            form {
+                align-items: flex-end;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                }
+                button {
+                    height: 100%;
+                }
+                input {
+                    background: #FFFFFF;
+                    border: 1px solid #E2E2E2;
+                    border-radius: 2px;
+                    padding: 12px;
+                    width: 17vw;
+                    @include animation;
+                    &:focus{
+                        border: 1px solid $brand;
+                        outline: none;
+                    }
+                }
+                label{
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+    #preview {
+        text-align: center;
+        margin: 40px;
+        padding: 100px;
+        p{
+            margin-top: 40px;
+        }
+    }
 }
