@@ -17,16 +17,16 @@
             <div class="card" id="welcome" v-show="homeActive">
                 <img src="assets/emptystate-1.png">
                 <p class="normal">Welcome to Meditrack. Meditrack allows to streamline the process of taking medicines for patients by directly sending them reminders. A patient can also rebook the medicine from the application when his stock gets over.</p>
-                <button class="primary btn" v-show="homeActive" @click="homeActive=!homeActive"> Process a new order</button>
+                <button class="primary btn" v-show="homeActive" @click="startneworder"> Process a new order</button>
             </div>
             <div id="primaryform" v-if="!homeActive">
                 <div class="card" id="input">
                     <div>
-                        <p class="heading">Order #124</p>
+                        <p class="heading">Order {{ordernumber}}</p>
                     </div>
                     <div>
                         <form>
-                            <div><label class="formlabel" for="medicinename">Medicine Name</label><input type="text" name="medicinename" placeholder="Start typing name of medicine" v-model="namevalue" required></div>
+                            <div><label class="formlabel" for="medicinename">Medicine Name</label><input type="text" name="medicinename" placeholder="Start typing name of medicine" v-model="namevalue" required autofocus></div>
                             <div><label class="formlabel" for="quantity">Quantity</label><input type="number" name="quantity" placeholder="Number of medicine units" v-model="quantityvalue" required></div>
                             <div><label class="formlabel" for="frequency">Frequency</label><input type="number" name="frequency" placeholder="Frequency of each medicine" v-model="frequencyvalue" required></div>
                             <button type="submit" class="secondary btn" @click="addMedicine">Add</button>
@@ -46,6 +46,11 @@
                         </tr>
                     </table>
                     <button class="primary btn">Proceed to checkout</button>
+                </div>
+                <div class="card" id="reviewform">
+                
+                    
+                    
                 </div>
             </div>
         </div>

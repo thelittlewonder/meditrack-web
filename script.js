@@ -22,7 +22,7 @@ Vue.component('nav-list', {
                     name: 'Dashboard',
                     icon: 'assets/dashboard.svg',
                     alticon: 'assets/dashboard-colored.svg',
-                    link: '#',
+                    link: 'index.html',
                     active: true
                 },
                 {
@@ -68,12 +68,14 @@ var en0 = new Vue({
         namevalue: "",
         quantityvalue: "",
         frequencyvalue: "",
-        orders: []
+        orders: [],
+        ordernumber: 0
     },
     methods: {
         addMedicine: function (e) {
             e.preventDefault();
             let temp = {
+                id: this.ordernumber,
                 name: this.namevalue,
                 qty: this.quantityvalue,
                 f: this.frequencyvalue
@@ -84,9 +86,13 @@ var en0 = new Vue({
             this.namevalue = "";
             this.quantityvalue = "";
             this.frequencyvalue = "";
-            if(this.orders.length){
-                this.listEmpty=false;
+            if (this.orders.length) {
+                this.listEmpty = false;
             }
+        },
+        startneworder: function () {
+            this.homeActive = !this.homeActive;
+            this.ordernumber++;
         }
     }
 })
