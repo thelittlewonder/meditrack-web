@@ -14,12 +14,12 @@
         </div>
         <div id="r1">
             <nav-list></nav-list>
-            <div class="card" id="welcome" v-show="!homeActive">
+            <div class="card" id="welcome" v-show="homeActive">
                 <img src="assets/emptystate-1.png">
                 <p class="normal">Welcome to Meditrack. Meditrack allows to streamline the process of taking medicines for patients by directly sending them reminders. A patient can also rebook the medicine from the application when his stock gets over.</p>
                 <button class="primary btn" v-show="homeActive" @click="startneworder"> Process a new order</button>
             </div>
-            <div id="primaryform" v-if="!homeActive">
+            <div id="primaryform" v-if="formActive">
                 <div class="card" id="input">
                     <div>
                         <p class="heading">Order {{ordernumber}}</p>
@@ -45,27 +45,23 @@
                             <td>{{order.f}} times a day</td>
                         </tr>
                     </table>
-                    <button class="primary btn">Proceed to checkout</button>
-                </div>
-                <div class="card" id="reviewform">
-
-
-
+                    <button class="primary btn" @click="review">Proceed to checkout</button>
                 </div>
             </div>
-            <div class="card" id="review">
+            <div class="card" id="review" v-show="reviewMode">
                 <div>
                     <p class="heading">Order {{ordernumber}}</p>
                 </div>
                 <table>
-                        <tr>
-                            <td class="formlabel">Medicine Name</td>
-                            <td class="formlabel">Price per tablet</td>
-                            <td class="formlabel">Dosage time</td>
-                            <td class="formlabel">Total price</td>
-                        </tr>
                     <tr>
-                        <td class="normal">Crocin Advance 500mg</td>
+                        <td class="formlabel">Medicine Name</td>
+                        <td class="formlabel">Price per tablet</td>
+                        <td class="formlabel">Dosage time</td>
+                        <td class="formlabel">Total price</td>
+                    </tr>
+
+                    <tr v-for="order in orders">
+                        <td class="normal">{{order.name}}</td>
                         <td class="normal">₹ 11.25</td>
                         <td class="images-icon">
                             <img src="assets/morning.png" class="time">
@@ -74,17 +70,6 @@
                             <img src="assets/night.png">
                         </td>
                         <td class="normal price">₹ 120</td>
-                    </tr>
-                    <tr>
-                        <td class="normal" valign="middle">Crocin Advance 500mg</td>
-                        <td class="normal" valign="middle">₹ 11.25</td>
-                        <td class="images-icon" valign="middle">
-                            <img src="assets/morning.png" class=" time unchecked">
-                            <img src="assets/noon.png" class="time">
-                            <img src="assets/evening.png" class="time">
-                            <img src="assets/night.png" class="unchecked">
-                        </td>
-                        <td class="normal price" valign="middle">₹ 120</td>
                     </tr>
                     <tr>
                         <td colspan="3" class="normal gst">Goods and Services Tax (GST)</td>
@@ -99,11 +84,17 @@
                 <div class="sendreq">
                     <div class="inputbox">
                         <p class="formlabel">Customer Id</p>
-                        <input type="text" placeholder="Enter the unique id of customer" id="customerid">
+                        <input type="text" placeholder="Enter the unique id of customer" id="customerid" v-model="userId" v-on:keyup.enter="connect">
                     </div>
                     <p class="normal">Ask the customer for his unique identification number. The customer must accept your bill request so that you can send him the reciept details.</p>
                 </div>
-                <button class="primary btn">Send Confirmation</button>
+                <button class="primary btn" @click="connect">Send Confirmation</button>
+            </div>
+            <div class="card" id="connection" v-show="connectionCheck">
+
+                <p class="normal" v-if="!ordercomplete"> Waiting for {{userId}} to accept your order....</p>
+                <p class="normal" v-else>Voila! Order Success! Check the details under the Past Orders tab</p>
+                <button class="primary btn">{{buttonText}}</button>
             </div>
         </div>
 

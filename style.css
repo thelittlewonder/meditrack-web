@@ -389,4 +389,14 @@ body {
   #review button {
     margin-top: 40px; }
 
+/* line 408, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+#connection {
+  padding: 32px;
+  height: 100%;
+  width: 80vw;
+  text-align: center; }
+  /* line 413, /Users/Abhishek/Playground/ge-hacks/webapp/style.scss */
+  #connection p {
+    margin-bottom: 32px; }
+
 /*# sourceMappingURL=style.css.map */

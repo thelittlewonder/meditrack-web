@@ -64,12 +64,18 @@ var en0 = new Vue({
     data: {
         options: [],
         homeActive: true,
+        formActive: false,
         listEmpty: true,
+        reviewMode: false,
+        connectionCheck: false,
+        ordercomplete: false,
+        buttonText: "Resend Confirmation",
         namevalue: "",
         quantityvalue: "",
         frequencyvalue: "",
         orders: [],
-        ordernumber: 0
+        ordernumber: 0,
+        userId: ""
     },
     methods: {
         addMedicine: function (e) {
@@ -92,7 +98,17 @@ var en0 = new Vue({
         },
         startneworder: function () {
             this.homeActive = !this.homeActive;
+            this.formActive = true;
             this.ordernumber++;
+        },
+        review: function () {
+            this.formActive = false;
+            this.reviewMode = true;
+        },
+        connect: function (e) {
+            e.preventDefault();
+            this.reviewMode = false;
+            this.connectionCheck = true;
         }
     }
 })
