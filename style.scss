@@ -236,7 +236,6 @@ body {
         width: 80%;
         margin: 48px 0px;
     }
-    button {}
 }
 
 @include placeholder {
@@ -269,7 +268,7 @@ body {
                 }
                 button {
                     height: 100%;
-                    &:focus{
+                    &:focus {
                         background-color: $brand;
                         color: White;
                     }
@@ -287,7 +286,9 @@ body {
                     }
                     font-family: Gotham Book;
                     font-size: 15px;
-                    color: rgb(68,68,68);
+                    color: rgb(68,
+                    68,
+                    68);
                     letter-spacing: 0.28px;
                 }
                 label {
@@ -314,5 +315,92 @@ body {
             }
         }
         padding: 24px;
+    }
+}
+
+#review {
+    text-align: center;
+    padding: 32px;
+    height: 100%;
+    div {
+        .heading {
+            text-align: left;
+            margin-bottom: 32px;
+        }
+    }
+    table {
+        width: 100%;
+        tr {
+            td {
+                text-align: left;
+                vertical-align: middle;
+                padding: 16px;
+                img {
+                    height: 56px;
+                    width: 56px;
+                }
+                .time {
+                    padding-right: 24px;
+                }
+                .unchecked {
+                    filter: grayscale(1);
+                }
+            }
+        }
+    }
+    .totalprice {
+        font-family: 'Gotham Bold';
+        font-size: 24px;
+        color: #00CD1B;
+        letter-spacing: 0.45px;
+    }
+    .price {
+        font-family: 'Gotham Bold';
+    }
+    .gst {
+        opacity: 0.35;
+    }
+    .sendreq {
+        text-align: left;
+        display: flex;
+        align-items: flex-end;
+        .inputbox {
+            display: flex;
+            flex-direction: column;
+            p {
+                text-align: left!important;
+                margin-left: 0;
+                margin-bottom: 12px;
+            }
+            input {
+                background: #FFFFFF;
+                border: 1px solid #E2E2E2;
+                border-radius: 2px;
+                padding: 12px;
+                width: 250px;
+                @include animation;
+                &:focus {
+                    border: 1px solid $brand;
+                    outline: none;
+                }
+                font-family: Gotham Book;
+                font-size: 15px;
+                color: rgb(68,
+                68,
+                68);
+                letter-spacing: 0.28px;
+            }
+        }
+        p {
+            text-align: left;
+            margin-left: 24px;
+        }
+    }
+    .divider {
+        border: 1px solid rgba(#E8E8E8, 0.2);
+        margin: 32px 0px;
+    }
+    button {
+        margin-top: 40px;
     }
 }
