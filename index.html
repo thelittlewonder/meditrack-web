@@ -14,7 +14,7 @@
         </div>
         <div id="r1">
             <nav-list></nav-list>
-            <div class="card" id="welcome" v-show="homeActive">
+            <div class="card" id="welcome" v-show="!homeActive">
                 <img src="assets/emptystate-1.png">
                 <p class="normal">Welcome to Meditrack. Meditrack allows to streamline the process of taking medicines for patients by directly sending them reminders. A patient can also rebook the medicine from the application when his stock gets over.</p>
                 <button class="primary btn" v-show="homeActive" @click="startneworder"> Process a new order</button>
@@ -52,6 +52,10 @@
                     
                     
                 </div>
+            </div>
+            <div class="card" id="review">
+            
+            
             </div>
         </div>
 

@@ -20,36 +20,36 @@ Vue.component('nav-list', {
             items: [
                 {
                     name: 'Dashboard',
-                    icon: 'assets/dashboard.svg',
-                    alticon: 'assets/dashboard-colored.svg',
+                    icon: 'assets/dashboard.png',
+                    alticon: 'assets/dashboard-colored.png',
                     link: 'index.html',
                     active: true
                 },
                 {
                     name: 'Notifications',
-                    icon: 'assets/notifications.svg',
-                    alticon: 'assets/notifications-colored.svg',
+                    icon: 'assets/notifications.png',
+                    alticon: 'assets/notifications-colored.png',
                     link: '#',
                     active: false
                 },
                 {
                     name: 'Past Orders',
-                    icon: 'assets/order.svg',
-                    alticon: 'assets/order-colored.svg',
+                    icon: 'assets/order.png',
+                    alticon: 'assets/order-colored.png',
                     link: '#',
                     active: false
                 },
                 {
                     name: 'Settings',
-                    icon: 'assets/settings.svg',
-                    alticon: 'assets/settings-colored.svg',
+                    icon: 'assets/settings.png',
+                    alticon: 'assets/settings-colored.png',
                     link: '#',
                     active: false
                 },
                 {
                     name: 'Support',
-                    icon: 'assets/support.svg',
-                    alticon: 'assets/support-colored.svg',
+                    icon: 'assets/support.png',
+                    alticon: 'assets/support-colored.png',
                     link: '#',
                     active: false
                 },
